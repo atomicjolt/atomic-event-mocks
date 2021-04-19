@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	m := events.MockModuleItemCreated()
+	m := events.MockModuleItemUpdated()
 
 	enc := json.NewEncoder(os.Stdout)
 	enc.SetIndent("", "    ")
