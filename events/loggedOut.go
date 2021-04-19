@@ -7,7 +7,7 @@ type LoggedOut struct {
 
 func MockLoggedOut() LoggedOut {
 	var mock LoggedOut
-	mock.Metadata = mockMetaData("logged_in")
+	mock.Metadata = mockMetaData("logged_out")
 
 	return mock
 }
