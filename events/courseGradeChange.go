@@ -1,4 +1,4 @@
-package main
+package events
 
 import (
 	"github.com/brianvoe/gofakeit/v6"
@@ -24,8 +24,7 @@ type CourseGradeChange struct {
 	} `json:"body"`
 }
 
-
-func mockCourseGradeChange() CourseGradeChange {
+func MockCourseGradeChange() CourseGradeChange {
 	var mock CourseGradeChange
 	mock.Metadata = mockMetaData()
 	gofakeit.Struct(&mock.Body)
