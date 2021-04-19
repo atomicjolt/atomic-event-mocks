@@ -25,7 +25,7 @@ type LearningOutcomeResultCreated struct {
 
 func MockLearningOutcomeResultCreated() LearningOutcomeResultCreated {
 	var mock LearningOutcomeResultCreated
-	mock.Metadata = mockMetaData()
+	mock.Metadata = mockMetaData("learning_outcome_result_created")
 	gofakeit.Struct(&mock.Body)
 	return mock
 }

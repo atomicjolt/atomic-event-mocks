@@ -26,7 +26,7 @@ type CourseGradeChange struct {
 
 func MockCourseGradeChange() CourseGradeChange {
 	var mock CourseGradeChange
-	mock.Metadata = mockMetaData()
+	mock.Metadata = mockMetaData("course_grade_change")
 	gofakeit.Struct(&mock.Body)
 	return mock
 }

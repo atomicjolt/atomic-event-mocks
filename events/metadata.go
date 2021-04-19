@@ -33,7 +33,7 @@ type Metadata struct {
 	EventTime          time.Time `json:"event_time"`
 }
 
-func mockMetaData() Metadata {
+func mockMetaData(eventName string) Metadata {
 	var m Metadata
 
 	json.Unmarshal([]byte(`{
@@ -64,5 +64,7 @@ func mockMetaData() Metadata {
 	}`), &m)
 
 	m.EventTime = gofakeit.DateRange(time.Now().AddDate(0, 0, -1), time.Now())
+	m.EventName = eventName
+
 	return m
 }

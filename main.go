@@ -7,10 +7,11 @@ import (
 )
 
 func main() {
-	m := events.MockLearningOutcomeResultUpdated()
+	m := events.MockAssetAccessed()
 
 	enc := json.NewEncoder(os.Stdout)
 	enc.SetIndent("", "    ")
+
 	if err := enc.Encode(&m); err != nil {
 		println(err)
 	}
