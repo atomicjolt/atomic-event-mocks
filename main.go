@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	m := events.MockAssetAccessed()
+	m := events.MockCourseProgress()
 
 	enc := json.NewEncoder(os.Stdout)
 	enc.SetIndent("", "    ")
