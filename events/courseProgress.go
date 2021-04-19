@@ -30,7 +30,7 @@ type CourseProgress struct {
 
 func MockCourseProgress() CourseProgress {
 	var mock CourseProgress
-	mock.Metadata = mockMetaData("course_grade_change")
+	mock.Metadata = mockMetaData("course_progress")
 	gofakeit.Struct(&mock.Body)
 
 	mock.Body.Progress.NextRequirementUrl = "http:/oxana.instructure.com/courses/1234567/modules/items/12345"
