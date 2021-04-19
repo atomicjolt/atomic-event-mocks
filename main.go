@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	m := events.MockSubmissionCreated()
+	m := events.MockLoggedIn()
 
 	enc := json.NewEncoder(os.Stdout)
 	enc.SetIndent("", "    ")
