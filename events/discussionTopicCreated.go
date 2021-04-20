@@ -24,7 +24,7 @@ type DiscussionTopicCreated struct {
 
 func MockDiscussionTopicCreated() DiscussionTopicCreated {
 	var mock DiscussionTopicCreated
-	mock.Metadata = mockMetaData("discussion_entry_created")
+	mock.Metadata = mockMetaData("discussion_topic_created")
 	gofakeit.Struct(&mock.Body)
 
 	mock.Body.ContextType = "Course"

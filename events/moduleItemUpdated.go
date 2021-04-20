@@ -7,5 +7,6 @@ type ModuleItemUpdated struct {
 func MockModuleItemUpdated() ModuleItemUpdated {
 	var mock ModuleItemUpdated
 	mock.ModuleItemCreated = MockModuleItemCreated()
+	mock.Metadata.EventName = "module_item_updated"
 	return mock
 }
