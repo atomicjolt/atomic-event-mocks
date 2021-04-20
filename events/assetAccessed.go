@@ -17,7 +17,7 @@ type AssetAccessed struct {
 	} `json:"body"`
 }
 
-func MockAssetAccessed() AssetAccessed {
+func (mock *AssetAccessed) Mock() {
 	assetTypes := []string{
 		"group",
 		"course",
@@ -36,11 +36,8 @@ func MockAssetAccessed() AssetAccessed {
 		"attachment",
 	}
 
-	var mock AssetAccessed
 	mock.Metadata = mockMetaData("asset_accessed")
 	gofakeit.Struct(&mock.Body)
 
 	mock.Body.AssetType = gofakeit.RandomString(assetTypes)
-
-	return mock
 }

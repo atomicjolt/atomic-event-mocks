@@ -24,9 +24,7 @@ type LearningOutcomeResultUpdated struct {
 	} `json:"body"`
 }
 
-func MockLearningOutcomeResultUpdated() LearningOutcomeResultUpdated {
-	var mock LearningOutcomeResultUpdated
+func (mock *LearningOutcomeResultUpdated) Mock() {
 	mock.Metadata = mockMetaData("learning_outcome_result_updated")
 	gofakeit.Struct(&mock.Body)
-	return mock
 }

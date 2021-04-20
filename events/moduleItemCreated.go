@@ -16,13 +16,10 @@ type ModuleItemCreated struct {
 	} `json:"body"`
 }
 
-func MockModuleItemCreated() ModuleItemCreated {
-	var mock ModuleItemCreated
+func (mock *ModuleItemCreated) Mock() {
 	mock.Metadata = mockMetaData("module_item_created")
 	gofakeit.Struct(&mock.Body)
 
 	mock.Body.ContextType = "Course"
 	mock.Body.WorkflowState = "active"
-
-	return mock
 }

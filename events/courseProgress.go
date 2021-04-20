@@ -28,12 +28,9 @@ type CourseProgress struct {
 	} `json:"body"`
 }
 
-func MockCourseProgress() CourseProgress {
-	var mock CourseProgress
+func (mock *CourseProgress) Mock() {
 	mock.Metadata = mockMetaData("course_progress")
 	gofakeit.Struct(&mock.Body)
 
 	mock.Body.Progress.NextRequirementUrl = "http:/oxana.instructure.com/courses/1234567/modules/items/12345"
-
-	return mock
 }

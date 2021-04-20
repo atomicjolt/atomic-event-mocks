@@ -11,12 +11,8 @@ type LoggedIn struct {
 	} `json:"body"`
 }
 
-func MockLoggedIn() LoggedIn {
-	var mock LoggedIn
+func (mock *LoggedIn) Mock() {
 	mock.Metadata = mockMetaData("logged_in")
 	gofakeit.Struct(&mock.Body)
-
 	mock.Body.RedirectUrl = "https://oxana.instructure.com/"
-
-	return mock
 }

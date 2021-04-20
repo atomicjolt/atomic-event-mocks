@@ -29,8 +29,7 @@ type SubmissionCreated struct {
 	} `json:"body"`
 }
 
-func MockSubmissionCreated() SubmissionCreated {
-	var mock SubmissionCreated
+func (mock *SubmissionCreated) Mock() {
 	mock.Metadata = mockMetaData("submission_created")
 	gofakeit.Struct(&mock.Body)
 
@@ -50,6 +49,4 @@ func MockSubmissionCreated() SubmissionCreated {
 
 	mock.Body.Url = "https://test.submission.net"
 	mock.Body.WorkflowState = "submitted"
-
-	return mock
 }

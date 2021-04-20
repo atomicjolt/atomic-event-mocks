@@ -17,9 +17,7 @@ type DiscussionEntryCreated struct {
 	} `json:"body"`
 }
 
-func MockDiscussionEntryCreated() DiscussionEntryCreated {
-	var mock DiscussionEntryCreated
+func (mock *DiscussionEntryCreated) Mock() {
 	mock.Metadata = mockMetaData("discussion_entry_created")
 	gofakeit.Struct(&mock.Body)
-	return mock
 }

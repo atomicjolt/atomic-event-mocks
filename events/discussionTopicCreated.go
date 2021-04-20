@@ -22,13 +22,10 @@ type DiscussionTopicCreated struct {
 	} `json:"body"`
 }
 
-func MockDiscussionTopicCreated() DiscussionTopicCreated {
-	var mock DiscussionTopicCreated
+func (mock *DiscussionTopicCreated) Mock() {
 	mock.Metadata = mockMetaData("discussion_topic_created")
 	gofakeit.Struct(&mock.Body)
 
 	mock.Body.ContextType = "Course"
 	mock.Body.WorkflowState = "active"
-
-	return mock
 }

@@ -4,9 +4,8 @@ type DiscussionTopicUpdated struct {
 	DiscussionTopicCreated
 }
 
-func MockDiscussionTopicUpdated() DiscussionTopicUpdated {
-	var mock DiscussionTopicUpdated
-	mock.DiscussionTopicCreated = MockDiscussionTopicCreated()
+func (mock *DiscussionTopicUpdated) Mock() {
+	mock.DiscussionTopicCreated = DiscussionTopicCreated{}
+	mock.DiscussionTopicCreated.Mock()
 	mock.Metadata.EventName = "discussion_topic_updated"
-	return mock
 }

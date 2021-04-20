@@ -17,12 +17,9 @@ type GroupCreated struct {
 	} `json:"body"`
 }
 
-func MockGroupCreated() GroupCreated {
-	var mock GroupCreated
+func (mock *GroupCreated) Mock() {
 	mock.Metadata = mockMetaData("group_created")
 
 	mock.Body.ContextType = "Course"
 	mock.Body.WorkflowState = "active"
-
-	return mock
 }

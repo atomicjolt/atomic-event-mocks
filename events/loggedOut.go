@@ -5,9 +5,6 @@ type LoggedOut struct {
 	Body     struct{} `json:"body"`
 }
 
-func MockLoggedOut() LoggedOut {
-	var mock LoggedOut
+func (mock *LoggedOut) Mock() {
 	mock.Metadata = mockMetaData("logged_out")
-
-	return mock
 }

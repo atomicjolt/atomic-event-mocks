@@ -16,10 +16,7 @@ type ConversationMessageCreated struct {
 	} `json:"body"`
 }
 
-func MockConversationMessageCreated() ConversationMessageCreated {
-	var mock ConversationMessageCreated
+func (mock *ConversationMessageCreated) Mock() {
 	mock.Metadata = mockMetaData("conversation_message_created")
 	gofakeit.Struct(&mock.Body)
-
-	return mock
 }

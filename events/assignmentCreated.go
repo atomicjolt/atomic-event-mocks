@@ -29,8 +29,7 @@ type AssignmentCreated struct {
 	} `json:"body"`
 }
 
-func MockAssignmentCreated() AssignmentCreated {
-	var mock AssignmentCreated
+func (mock *AssignmentCreated) Mock() {
 	mock.Metadata = mockMetaData("assignment_created")
 	gofakeit.Struct(&mock.Body)
 
@@ -50,6 +49,4 @@ func MockAssignmentCreated() AssignmentCreated {
 		"on_paper",
 	}
 	mock.Body.SubmissionTypes = gofakeit.RandomString(submissionTypes)
-
-	return mock
 }

@@ -14,9 +14,7 @@ type SyllabusUpdated struct {
 	} `json:"body"`
 }
 
-func MockSyllabusUpdated() SyllabusUpdated {
-	var mock SyllabusUpdated
+func (mock *SyllabusUpdated) Mock() {
 	mock.Metadata = mockMetaData("syllabus_updated")
 	gofakeit.Struct(&mock.Body)
-	return mock
 }

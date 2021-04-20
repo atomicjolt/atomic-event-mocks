@@ -14,11 +14,7 @@ type GroupMembershipCreated struct {
 	} `json:"body"`
 }
 
-func MockGroupMembershipCreated() GroupMembershipCreated {
-	var mock GroupMembershipCreated
+func (mock *GroupMembershipCreated) Mock() {
 	mock.Metadata = mockMetaData("group_membership_created")
-
 	mock.Body.WorkflowState = "active"
-
-	return mock
 }

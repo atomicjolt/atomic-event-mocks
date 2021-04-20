@@ -24,9 +24,7 @@ type CourseGradeChange struct {
 	} `json:"body"`
 }
 
-func MockCourseGradeChange() CourseGradeChange {
-	var mock CourseGradeChange
+func (mock *CourseGradeChange) Mock() {
 	mock.Metadata = mockMetaData("course_grade_change")
 	gofakeit.Struct(&mock.Body)
-	return mock
 }

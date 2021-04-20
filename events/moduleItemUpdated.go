@@ -4,9 +4,8 @@ type ModuleItemUpdated struct {
 	ModuleItemCreated
 }
 
-func MockModuleItemUpdated() ModuleItemUpdated {
-	var mock ModuleItemUpdated
-	mock.ModuleItemCreated = MockModuleItemCreated()
+func (mock *ModuleItemUpdated) Mock() {
+	mock.ModuleItemCreated = ModuleItemCreated{}
+	mock.ModuleItemCreated.Mock()
 	mock.Metadata.EventName = "module_item_updated"
-	return mock
 }

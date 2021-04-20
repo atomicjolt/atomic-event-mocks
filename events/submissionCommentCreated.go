@@ -19,8 +19,7 @@ type SubmissionCommentCreated struct {
 	} `json:"body"`
 }
 
-func MockSubmissionCommentCreated() SubmissionCommentCreated {
-	var mock SubmissionCommentCreated
+func (mock *SubmissionCommentCreated) Mock() {
 	mock.Metadata = mockMetaData("submission_comment_created")
 	gofakeit.Struct(&mock.Body)
 
@@ -28,6 +27,4 @@ func MockSubmissionCommentCreated() SubmissionCommentCreated {
 	for i := 0; i < len(mock.Body.AttachmentIds); i++ {
 		mock.Body.AttachmentIds[i] = strconv.Itoa(gofakeit.Number(1, 100))
 	}
-
-	return mock
 }

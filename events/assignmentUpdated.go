@@ -4,9 +4,8 @@ type AssignmentUpdated struct {
 	AssignmentCreated
 }
 
-func MockAssignmentUpdated() AssignmentUpdated {
-	var mock AssignmentUpdated
-	mock.AssignmentCreated = MockAssignmentCreated()
+func (mock *AssignmentUpdated) Mock() {
+	mock.AssignmentCreated = AssignmentCreated{}
+	mock.AssignmentCreated.Mock()
 	mock.Metadata.EventName = "assignment_updated"
-	return mock
 }
