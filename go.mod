@@ -1,4 +1,4 @@
-module atomicjolt.com/MockCanvasEvents
+module github.com/atomicjolt/atomic-event-mocks
 
 go 1.16
 

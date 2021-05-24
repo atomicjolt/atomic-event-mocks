@@ -1,8 +1,9 @@
 package main
 
 import (
-	"atomicjolt.com/MockCanvasEvents/events"
 	"encoding/json"
+	"github.com/atomicjolt/atomic-event-mocks/events"
+	"github.com/atomicjolt/atomic-event-mocks/lib"
 )
 
 const ApiUrl = "http://localhost:8888/events"
