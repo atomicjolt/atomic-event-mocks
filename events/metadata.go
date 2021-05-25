@@ -42,7 +42,7 @@ func mockMetaData(eventName string) Metadata {
     "root_account_lti_guid": "794d72b707af6ea82cfe3d5d473f16888a8366c7.canvas.docker",
     "user_login": "oxana@instructure.com",
     "user_account_id": "10000000000002",
-    "user_sis_id": null,
+    "user_sis_id": "456-T45",
     "user_id": "21070000000000001",
     "time_zone": "America/Denver",
     "context_type": "Course",
